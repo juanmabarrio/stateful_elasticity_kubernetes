@@ -10,7 +10,7 @@ El objetivo de este trabajo es ofrecer un estudio que sirva de introducción par
 * Service
 * Operador
 
-2. Revisión de alto nivel como se consigue la elasticidad no stateful, con Deployment, Load Balancer, y el Horizontal Pod Autoscaler para el autoescalado.
+2. Revisión por encima, rapida, de alto nivel sobre como se consigue la elasticidad no stateful, con Deployment, Load Balancer, y el Horizontal Pod Autoscaler para el autoescalado.
 3. Qué son y como funcionan los Stateful Sets
 4. Estudiar como PostgreSQL y RabbitMQ utilizan stateful sets para implementar scale in y scale out. 
 5. Qué soporte tienen las apps para poder implementar scale in y scale out
