@@ -18,3 +18,6 @@ El objetivo de este trabajo es ofrecer un estudio que sirva de introducción par
 - simular pruebas de carga de envío de mensajes en la Rabbit y forzar el "scale-out" y después de un tiempo reducir la carga para que se vea el "scale-in" sin caída de servicio. 
 - Lo mismo pero con base de datos. Aquí habría que estudiar si se puede hacer dinámico (añadir nodos bajo demanda) o es una configuración que se tiene que definir al arrancar. Pero en cualquier caso se podrían hacer pruebas de carga para ver cómo se comporta el sistema con 1 nodo o 2 nodos, etc...
 7. Describir en alto nivel cómo utilizan los operators el recurso StatefulSet para hacer scale-out y scale-in the los servicios. Aquí sería buscar artículos en los que se explicara y si te animas, ver el código fuente de algunos operadores y explicar lo que hace cada uno, intentar sacar algún patrón, compararlos...
+
+
+-------------------
