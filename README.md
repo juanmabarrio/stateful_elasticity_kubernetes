@@ -2,7 +2,7 @@
 ## Trabajo de fin de máster
 El objetivo de este trabajo es ofrecer un estudio que sirva de introducción para alguien que quiera escalar un servicio stateful con kubernetes.
 
-###Tareas: 
+### Tareas: 
 1. Definición de términos
 * Servicio no stateful vs servicio stateful
 * Autoescalado
