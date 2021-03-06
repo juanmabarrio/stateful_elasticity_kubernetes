@@ -1,0 +1,25 @@
+# Stateful sets
+
+Un stateful set es el objeto Workload usado para manejar aplicaciones con estado.
+
+Maneja el despliegue y scaling de un conjunto de Pods y da garantias sobre la ordenación y la unicidad de estos Pods.
+
+Como un deployment, un StatefulSet maneja Pods que están basados en una especificación de contenedor idéntica, pero a diferencia de estos, el StatefulSet mantiene una identidad para cada uno de sus Pods. Los pods son creados a partir de la misma Spec, pero no son intercambiables: cada uno tiene un identificador persistente que mantiene a lo largo de los reescheduling.
+
+## Usando StatefulSets
+
+Los StatefulStes son valiosos para aplicaciones con uno o más de los siguientes:
+* Estables y únicos identificadors de red
+* Estable y ordenado almacenamiento
+* Ordenado y grácil despliegue y scaling.
+* Ordenado y automático rolling updates.
+
+
+Estable es sinónimo de persistente a lo largo de reescheduling de Pods. 
+
+## Limitaciones
+
+* El almacenamiento de un Pod dado debe estar provisto por un PeristentVolume Provisioner que esté basado en la solicitada "storage class", o pre-provisionada por un admin.
+* Borrar y o scalar un StatefulSet down no borra los volúmenes asociados con el STatefulSet. Esto es así para asegurar la seguridad de los datos que eneralmente es más valriosa que una purga automática de los recursos del StatefulSet.
+* Los StatefulSet necesitan de un HeadlessService para ser responsable de la red de identidades de los Pods. Tú eres responsable de crear este Servicio.
+* Al usar Rolling Updates con la Pod Management Policty por defecto (OrderedReady), es posible llegar a un estado corrupot que requiera intervención manual para reparar.
